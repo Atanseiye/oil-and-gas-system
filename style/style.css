@@ -11,3 +11,11 @@ body {
     counter-reset: 42px;
     display: block;
 }
+
+.lower {
+    padding: 4em;
+    align-self: start;
+    descent-override: 43;
+    background-attachment: fixed;
+    background-position: 0 0;
+}
