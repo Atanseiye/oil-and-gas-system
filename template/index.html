@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservoir Data Integration</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <div id="visualization"></div>
+    <script>
+        // Example D3.js visualization
+        fetch('/api/integrated-data')
+            .then(response => response.json())
+            .then(data => {
+                const svg = d3.select("#visualization").append("svg")
+                    .attr("width", 500)
+                    .attr("height", 500);
+                
+                svg.selectAll("circle")
+                    .data(data.well_log)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y)
+                    .attr("r", 5)
+                    .attr("fill", "blue");
+            });
+    </script>
+</body>
+</html>
