@@ -3,3 +3,11 @@ body {
     max-width: 5px;
     margin: auto;
 }
+
+.upper {
+    background-origin: padding-box;
+    break-inside: auto;
+    visibility: inherit;
+    counter-reset: 42px;
+    display: block;
+}
