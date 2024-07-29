@@ -4,7 +4,7 @@ import os
 from models import db, WellLog, SeismicData
 from integration import integrate_datasets
 from parser import parse_seismic_data, parse_well_log, convert_to_common_format
-
+import psycopg2
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
