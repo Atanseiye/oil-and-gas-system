@@ -34,6 +34,8 @@ cur.execute(
     """
 )
 
+# cur.fetchone()
+
 conn.commit() # commit all your changes
 
 cur.close() #close the cursor
